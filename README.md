@@ -1,122 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spam Email Classifier using Machine Learning & NLP</title>
-</head>
-<body>
+# 📧 Spam Email Classifier using Machine Learning & NLP
 
-    <h1>📧 Spam Email Classifier using Machine Learning & NLP</h1>
+## 📌 Project Overview
 
-    <hr>
+This project is a Spam Email Classification System developed using **Machine Learning** and **Natural Language Processing (NLP)** techniques. The system automatically classifies incoming emails/messages as either **Spam** or **Ham (Not Spam)**.
 
-    <h2>📌 Project Overview</h2>
+The project demonstrates the complete machine learning workflow, including data preprocessing, text cleaning, feature extraction, model training, evaluation, and prediction on unseen messages.
 
-    <p>
-        This project is a Spam Email Classification System developed using
-        <strong>Machine Learning</strong> and
-        <strong>Natural Language Processing (NLP)</strong> techniques.
-        The system automatically classifies incoming emails/messages as either
-        <strong>Spam</strong> or <strong>Ham (Not Spam)</strong>.
-    </p>
+---
 
-    <p>
-        The project demonstrates the complete machine learning workflow,
-        including data preprocessing, text cleaning, feature extraction,
-        model training, evaluation, and prediction on unseen messages.
-    </p>
+## 📊 Dataset Information
 
-    <hr>
+The model was trained using the **SMS Spam Collection Dataset** containing **5,572 labeled messages**.
 
-    <h2>📊 Dataset Information</h2>
+### Dataset Distribution
 
-    <p>
-        The model was trained using the
-        <strong>SMS Spam Collection Dataset</strong>
-        containing <strong>5,572 labeled messages</strong>.
-    </p>
+- **Ham (0)** – Legitimate messages
+- **Spam (1)** – Unwanted, promotional, or fraudulent messages
 
-    <h3>Dataset Distribution</h3>
+### Dataset Size
 
-    <ul>
-        <li><strong>Ham (0)</strong> – Legitimate messages</li>
-        <li><strong>Spam (1)</strong> – Unwanted, promotional, or fraudulent messages</li>
-    </ul>
+| Feature | Value |
+|----------|--------|
+| Total Messages | 5,572 |
+| Input Feature | Message Text |
+| Target Variable | Spam/Ham Label |
 
-    <h3>Dataset Size</h3>
+---
 
-    <ul>
-        <li>Total Messages: 5,572</li>
-        <li>Input Feature: Message Text</li>
-        <li>Target Variable: Spam/Ham Label</li>
-    </ul>
+## 🛠 Technologies Used
 
-    <hr>
+- Python
+- NumPy
+- Pandas
+- NLTK
+- Scikit-Learn
 
-    <h2>🛠 Technologies Used</h2>
+---
 
-    <ul>
-        <li>Python</li>
-        <li>NumPy</li>
-        <li>Pandas</li>
-        <li>NLTK</li>
-        <li>Scikit-Learn</li>
-    </ul>
+## 🧠 Natural Language Processing (NLP)
 
-    <hr>
+### Text Preprocessing
 
-    <h2>🧠 Natural Language Processing (NLP)</h2>
+The following preprocessing techniques were applied:
 
-    <h3>Text Preprocessing</h3>
+- Convert text to lowercase
+- Remove punctuation
+- Remove stopwords
+- Lemmatization using WordNet Lemmatizer
 
-    <ul>
-        <li>Convert text to lowercase</li>
-        <li>Remove punctuation</li>
-        <li>Remove stopwords</li>
-        <li>Lemmatization using WordNet Lemmatizer</li>
-    </ul>
+### Feature Extraction
 
-    <h3>Feature Extraction</h3>
+**TF-IDF (Term Frequency–Inverse Document Frequency)** Vectorization was used to convert text data into numerical vectors for machine learning.
 
-    <p>
-        TF-IDF (Term Frequency–Inverse Document Frequency) Vectorization
-        was used to convert text data into numerical vectors.
-    </p>
+---
 
-    <hr>
+## 🤖 Machine Learning Model
 
-    <h2>🤖 Machine Learning Model</h2>
+### Algorithm Used
 
-    <ul>
-        <li>Gaussian Naive Bayes</li>
-    </ul>
+- Gaussian Naive Bayes
 
-    <p>
-        The model was trained using TF-IDF features extracted from cleaned
-        messages to identify patterns associated with spam and legitimate messages.
-    </p>
+The model was trained using TF-IDF features extracted from cleaned messages to identify patterns associated with spam and legitimate messages.
 
-    <hr>
+---
 
-    <h2>🔄 Project Workflow</h2>
+## 🔄 Project Workflow
 
-    <ol>
-        <li>Load Dataset</li>
-        <li>Text Preprocessing</li>
-        <li>Remove Punctuation</li>
-        <li>Remove Stopwords</li>
-        <li>Apply Lemmatization</li>
-        <li>TF-IDF Vectorization</li>
-        <li>Train-Test Split</li>
-        <li>Train Gaussian Naive Bayes Model</li>
-        <li>Evaluate Model</li>
-        <li>Predict New Messages</li>
-    </ol>
+1. Load Dataset
+2. Text Preprocessing
+3. Remove Punctuation
+4. Remove Stopwords
+5. Apply Lemmatization
+6. TF-IDF Vectorization
+7. Train-Test Split
+8. Train Gaussian Naive Bayes Model
+9. Evaluate Model
+10. Predict New Messages
 
-    <h3>Workflow Diagram</h3>
+### Workflow Diagram
 
-    <pre>
+```text
 Raw Messages
       │
       ▼
@@ -130,90 +93,90 @@ Gaussian Naive Bayes
       │
       ▼
 Spam / Ham Prediction
-    </pre>
+```
 
-    <hr>
+---
 
-    <h2>📈 Model Evaluation</h2>
+## 📈 Model Evaluation
 
-    <ul>
-        <li>Accuracy Score</li>
-        <li>Confusion Matrix</li>
-        <li>Classification Report</li>
-    </ul>
+The model was evaluated using:
 
-    <p>
-        Add your actual Train Accuracy and Test Accuracy results here.
-    </p>
+- Accuracy Score
+- Confusion Matrix
+- Classification Report
 
-    <hr>
+### Evaluation Metrics
 
-    <h2>📬 Sample Prediction</h2>
+- Training Accuracy: Add Your Result
+- Testing Accuracy: Add Your Result
 
-    <h3>Input Message</h3>
+---
 
-    <pre>
-Hi its glad to meet you, you got an offer worth 25 lakhs
-    </pre>
+## 📬 Sample Prediction
 
-    <h3>Output</h3>
+### Input Message
 
-    <pre>
+```text
+Congratulations! You have won a ₹50,000 cash prize. Click the link below to claim your reward now.
+```
+
+### Output
+
+```text
 SPAM : Mail will go to Spam
-    </pre>
+```
 
-    <hr>
+---
 
-    <h2>🎯 Key Learning Outcomes</h2>
+## 🎯 Key Learning Outcomes
 
-    <ul>
-        <li>Natural Language Processing (NLP)</li>
-        <li>Text Cleaning & Preprocessing</li>
-        <li>Stopword Removal</li>
-        <li>Lemmatization</li>
-        <li>TF-IDF Vectorization</li>
-        <li>Machine Learning Classification</li>
-        <li>Naive Bayes Algorithm</li>
-        <li>Model Evaluation Techniques</li>
-        <li>Real-World Spam Detection Applications</li>
-    </ul>
+- Natural Language Processing (NLP)
+- Text Cleaning & Preprocessing
+- Stopword Removal
+- Lemmatization
+- TF-IDF Vectorization
+- Machine Learning Classification
+- Naive Bayes Algorithm
+- Model Evaluation Techniques
+- Real-World Spam Detection Applications
 
-    <hr>
+---
 
-    <h2>🚀 Future Enhancements</h2>
+## 🚀 Future Enhancements
 
-    <ul>
-        <li>Implement Recurrent Neural Networks (RNN)</li>
-        <li>Implement Long Short-Term Memory (LSTM)</li>
-        <li>Experiment with Bidirectional LSTM</li>
-        <li>Use Word2Vec and GloVe Embeddings</li>
-        <li>Fine-tune BERT for advanced text classification</li>
-        <li>Deploy using Flask or Streamlit</li>
-        <li>Integrate real-time email spam filtering</li>
-    </ul>
+- Implement Recurrent Neural Networks (RNN)
+- Implement Long Short-Term Memory (LSTM)
+- Experiment with Bidirectional LSTM
+- Use Word2Vec and GloVe Embeddings
+- Fine-tune BERT for advanced text classification
+- Deploy using Flask or Streamlit
+- Integrate real-time email spam filtering
 
-    <hr>
+---
 
-    <h2>📚 Libraries Used</h2>
+## 📚 Libraries Used
 
-    <pre>
+```python
 import numpy as np
 import pandas as pd
 import nltk
 import sklearn
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import GaussianNB
-    </pre>
+```
 
-    <hr>
+---
 
-    <h2>👨‍💻 Author</h2>
+## 👨‍💻 Author
 
-    <p>
-        <strong>Chaithanya Gollapalli</strong><br>
-        Aspiring AI & Data Science Engineer passionate about Machine Learning,
-        Deep Learning, NLP, and Artificial Intelligence.
-    </p>
+### Chaithanya Gollapalli
 
-</body>
-</html>
+Aspiring AI & Data Science Engineer passionate about:
+
+- Machine Learning
+- Deep Learning
+- Natural Language Processing (NLP)
+- Artificial Intelligence
+
+---
+
